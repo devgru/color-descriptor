@@ -41,7 +41,7 @@ const locales = {
   }
 };
 
-function getDescriptor(localeId = 'en') {
+function ColorDescriptor(localeId = 'en') {
   const {
     lightness,
     chromaticity,
@@ -94,6 +94,5 @@ function getDescriptor(localeId = 'en') {
   };
 }
 
-export default { getDescriptor };
-
-export { getDescriptor };
+export default ColorDescriptor;
+export { ColorDescriptor };
