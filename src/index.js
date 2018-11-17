@@ -84,13 +84,14 @@ function ColorDescriptor(localeId = 'en') {
 
   const properties = [lightnessFn, chromaticityFn, temperatureFn];
 
-  function getDescription(color) {
+  function describe(color) {
     return properties
       .map(propertyOf(hcl(color)))
       .filter(Boolean);
   }
   return {
-    getDescription
+    describe,
+    properties,
   };
 }
 
